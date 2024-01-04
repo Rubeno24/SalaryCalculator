@@ -55,6 +55,40 @@ function getNetAnnualPay() {
   net_Hourly_Pay = net_Hourly_Pay.toFixed(2);
 
   var formatted_Net_Hourly_Income = parseFloat(net_Hourly_Pay).toLocaleString();
+
   net_Hourly_Income_Label.textContent =
     "Net Hourly Pay: $" + formatted_Net_Hourly_Income;
+}
+document.getElementById("yearlyWage").addEventListener("input", function () {
+  getHourlyPay();
+});
+
+document
+  .getElementById("weeks_in_Year_HPC")
+  .addEventListener("input", function () {
+    getHourlyPay();
+  });
+
+document
+  .getElementById("weeklyHours_HPC")
+  .addEventListener("input", function () {
+    getHourlyPay();
+  });
+
+function getHourlyPay() {
+  var yearlyWage = document.getElementById("yearlyWage").value;
+  var numberStripped = yearlyWage.replace(/,/g, "");
+  yearlyWage = numberStripped;
+
+  var weeks_in_Year_HPC = document.getElementById("weeks_in_Year_HPC").value;
+  var weeklyHours_HPC = document.getElementById("weeklyHours_HPC").value;
+
+  var hourlyWageHPC = numberStripped / weeks_in_Year_HPC / weeklyHours_HPC;
+  hourlyWageHPC = hourlyWageHPC.toFixed(2);
+
+  var resultLabel_HPC = document.getElementById("resultLabel_HPC");
+
+  var formatted_hourlyWageHPC = parseFloat(hourlyWageHPC).toLocaleString();
+
+  resultLabel_HPC.textContent = "Hourly Wage: $" + formatted_hourlyWageHPC;
 }

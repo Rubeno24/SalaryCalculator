@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salary Calculator</title>
-    <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+
     <!-- Link to your external CSS file or add styles here -->
   </head>
   <body>
@@ -16,9 +17,9 @@
 
     <main>
       <div class="annual_Pay">
-        <div class="annual_pay_title">Annual Pay</div>
+        <div class="annual_pay_title">Annual Pay Calculator</div>
 
-        <label for="weeklyHours">Working Hours Per Week</label>
+        <label for="weeklyHours">Hours Worked Per Week</label>
         <input type="number" id="weeklyHours" name="weeklyHours" value="40" />
 
         <label for="weeks_in_Year">Weeks Per Year</label>
@@ -43,7 +44,7 @@
       </div>
 
       <div class="netPay">
-        <div class="net_Annual_pay_title">Net Annual Pay</div>
+        <div class="horuly_Pay_title">Net Annual Pay Calculator</div>
 
         <label for="taxPercentage">Tax Percentage </label>
         <input
@@ -68,9 +69,52 @@
         >
       </div>
 
-      <!-- Add more HTML content to the main section if needed -->
+      <div class="Hourly_Pay_Calculator">
+        <div class="Hourly">
+          <div class="annual_pay_title">Hourly Pay Calculator</div>
+
+          <label for="yearlyWage">Amount of Pay Per Year</label>
+          <input
+            type="text"
+            id="yearlyWage"
+            name="yearlyWage"
+            placeholder="Enter Yearly wage $"
+          />
+
+          <label for="weeks_in_Year">Weeks Per Year</label>
+          <input
+            type="number"
+            id="weeks_in_Year_HPC"
+            name="weeks_in_Year_HPC"
+            value="52"
+          />
+
+          <label for="weeklyHours_HPC">Hours Worked Per Week</label>
+          <input
+            type="number"
+            id="weeklyHours_HPC"
+            name="weeklyHours_HPC"
+            value="40"
+          />
+
+          <label for="result" id="resultLabel_HPC" class="input-label"
+            >Hourly Pay: $0.00</label
+          >
+        </div>
+      </div>
     </main>
 
     <!-- Link to your external JavaScript file or add scripts here -->
+    <script>
+      var inputField = document.getElementById("yearlyWage");
+      inputField.addEventListener("input", function () {
+        var removeChar = this.value.replace(/[^0-9\.]/g, ""); // Remove non-numeric characters
+        var removeDot = removeChar.replace(/\./g, ""); // Remove dots
+        this.value = removeDot;
+
+        var formattedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.value = formattedNumber;
+      });
+    </script>
   </body>
 </html>
