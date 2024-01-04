@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Calculator</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
     <!-- Link to your external CSS file or add styles here -->
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <h1>Your Website</h1>
-        <!-- Add navigation or other header content here -->
+      <h1>Salary Calculator</h1>
+      <!-- Add your header content here -->
     </header>
 
     <main>
-        <!-- Your main content goes here -->
-        <h2>Welcome to Your Website!</h2>
-        <p>This is a simple HTML template for your web page.</p>
+      <div class="form-container">
+        <label for="weeklyHours">Working Hours Per Week</label>
+        <input type="number" id="weeklyHours" name="weeklyHours" value="40" />
+
+        <label for="weeks_in_Year">Weeks Per Year</label>
+        <input
+          type="number"
+          id="weeks_in_Year"
+          name="weeks_in_Year"
+          value="52"
+        />
+
+        <label for="hourlyWage">Hourly Wage</label>
+        <input
+          type="number"
+          id="hourlyWage"
+          name="hourlyWage"
+          placeholder="Enter hourly wage $"
+        />
+        <label for="result" id="resultLabel" class="input-label">Result</label>
+      </div>
+
+      <!-- Add more HTML content to the main section if needed -->
     </main>
 
-    <footer>
-        <!-- Your footer content goes here -->
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </footer>
-
     <!-- Link to your external JavaScript file or add scripts here -->
-
-</body>
+  </body>
 </html>
