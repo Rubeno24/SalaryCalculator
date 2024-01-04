@@ -23,7 +23,7 @@ header {
   padding: 10px;
 }
 
-.form-container {
+.annual_Pay {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,9 +38,48 @@ header {
   margin-top: 20px; /* Add margin on top for vertical centering */
 }
 
-.form-container input {
+.annual_Pay input {
   width: 100%;
   padding: 12px 8px; /* Adjust top and bottom padding */
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.annual_pay_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.net_Annual_pay_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.netPay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 300px; /* Set a maximum width */
+  margin: auto; /* Center horizontally */
+  margin-top: 20px; /* Add margin on top for vertical centering */
+}
+
+.netPay input {
+  width: 100%;
+  padding: 12px 8px; /* Adjust top and bottom padding */
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+.netPay label {
+  width: 100%;
+  padding: 5px 2px; /* Adjust top and bottom padding */
   margin-bottom: 16px;
   box-sizing: border-box;
 }

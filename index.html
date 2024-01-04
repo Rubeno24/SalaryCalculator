@@ -15,7 +15,9 @@
     </header>
 
     <main>
-      <div class="form-container">
+      <div class="annual_Pay">
+        <div class="annual_pay_title">Annual Pay</div>
+
         <label for="weeklyHours">Working Hours Per Week</label>
         <input type="number" id="weeklyHours" name="weeklyHours" value="40" />
 
@@ -34,7 +36,30 @@
           name="hourlyWage"
           placeholder="Enter hourly wage $"
         />
-        <label for="result" id="resultLabel" class="input-label">$0.00</label>
+
+        <label for="result" id="resultLabel" class="input-label"
+          >Annual Pay: $0.00</label
+        >
+      </div>
+
+      <div class="netPay">
+        <div class="net_Annual_pay_title">Annual Pay</div>
+
+        <label for="taxPercentage">Tax Percentage </label>
+        <input
+          type="number"
+          id="taxPercentage"
+          name="taxPercentage"
+          placeholder="Enter tax percentage"
+          value="10"
+        />
+
+        <label for="result" id="resultLabel" class="input-label"
+          >Net Yearly Income $0.00</label
+        >
+        <label for="result" id="resultLabel" class="input-label"
+          >Net Hourly Income $0.00</label
+        >
       </div>
 
       <!-- Add more HTML content to the main section if needed -->
