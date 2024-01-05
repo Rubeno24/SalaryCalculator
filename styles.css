@@ -7,32 +7,6 @@ body {
   box-sizing: border-box;
 }
 
-.custom-keyboard {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 5px;
-  max-width: 400px;
-  margin: auto;
-}
-
-.key {
-  padding: 10px;
-  text-align: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 /* Apply a max-width to the main content area for better readability on larger screens */
 main {
   max-width: 800px;
@@ -66,7 +40,7 @@ header {
 }
 
 .annual_Pay input {
-  border: 2px solid #0066cc;
+  border: 2px solid #6ab4fd;
   border-radius: 20px;
   width: 100%;
   padding: 12px 8px; /* Adjust top and bottom padding */
@@ -91,7 +65,7 @@ header {
 }
 
 .Hourly_Pay_Calculator input {
-  border: 2px solid#0066cc;
+  border: 2px solid #6ab4fd;
   border-radius: 20px;
   width: 100%;
   padding: 12px 8px; /* Adjust top and bottom padding */
@@ -132,7 +106,7 @@ header {
 }
 
 .netPay input {
-  border: 2px solid #0066cc;
+  border: 2px solid #6ab4fd;
 
   border-radius: 20px;
   width: 100%;

@@ -92,3 +92,6 @@ function getHourlyPay() {
 
   resultLabel_HPC.textContent = "Hourly Wage: $" + formatted_hourlyWageHPC;
 }
+function appendToInput(value) {
+  document.getElementById("customInput").value += value;
+}
