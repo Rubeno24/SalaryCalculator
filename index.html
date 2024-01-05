@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information for character set and viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salary Calculator</title>
+
+    <!-- Link to external stylesheet and JavaScript file -->
     <link rel="stylesheet" href="styles.css" />
     <script defer src="main.js"></script>
-
-    <!-- Link to your external CSS file or add styles here -->
   </head>
   <body>
     <header>
+      <!-- Header section with the title -->
       <h1>Salary Calculator</h1>
-      <!-- Add your header content here -->
     </header>
 
     <main>
+      <!-- Annual Pay Calculator Section -->
       <div class="annual_Pay">
         <div class="annual_pay_title">Annual Pay Calculator</div>
 
+        <!-- Input fields for weekly hours, weeks in a year, and hourly wage -->
         <label for="weeklyHours">Hours Worked Per Week</label>
         <input type="number" id="weeklyHours" name="weeklyHours" value="40" />
 
@@ -38,14 +41,17 @@
           placeholder="Enter hourly wage $"
         />
 
+        <!-- Display the result label for annual pay -->
         <label for="result" id="resultLabel" class="input-label"
           >Annual Pay: $0.00</label
         >
       </div>
 
+      <!-- Net Annual Pay Calculator Section -->
       <div class="netPay">
         <div class="horuly_Pay_title">Net Annual Pay Calculator</div>
 
+        <!-- Input field for tax percentage -->
         <label for="taxPercentage">Tax Percentage </label>
         <input
           type="number"
@@ -55,6 +61,7 @@
           value="10"
         />
 
+        <!-- Display the result labels for net hourly and yearly income -->
         <label
           for="net_Hourly_Income"
           id="net_Hourly_Income"
@@ -69,10 +76,12 @@
         >
       </div>
 
+      <!-- Hourly Pay Calculator Section -->
       <div class="Hourly_Pay_Calculator">
         <div class="Hourly">
           <div class="annual_pay_title">Hourly Pay Calculator</div>
 
+          <!-- Input fields for yearly wage, weeks in a year, and weekly hours -->
           <label for="yearlyWage">Amount of Pay Per Year</label>
           <input
             type="text"
@@ -81,7 +90,7 @@
             placeholder="Enter Yearly wage $"
           />
 
-          <label for="weeks_in_Year">Weeks Per Year</label>
+          <label for="weeks_in_Year_HPC">Weeks Per Year</label>
           <input
             type="number"
             id="weeks_in_Year_HPC"
@@ -97,6 +106,7 @@
             value="40"
           />
 
+          <!-- Display the result label for hourly pay -->
           <label for="result" id="resultLabel_HPC" class="input-label"
             >Hourly Pay: $0.00</label
           >
@@ -104,7 +114,7 @@
       </div>
     </main>
 
-    <!-- Link to your external JavaScript file or add scripts here -->
+    <!-- JavaScript script to format the input field for yearly wage -->
     <script>
       var inputField = document.getElementById("yearlyWage");
       inputField.addEventListener("input", function () {
@@ -116,7 +126,9 @@
         this.value = formattedNumber;
       });
     </script>
+
     <footer>
+      <!-- Footer section with social media links -->
       <div class="social-links">
         <a href="https://www.instagram.com/rubeno_24_/" target="_blank"
           >Instagram</a
@@ -127,7 +139,6 @@
         <a href="http://linkedin.com/in/rubenortega1" target="_blank"
           >LinkedIn</a
         >
-
         <!-- Add more social media links as needed -->
       </div>
     </footer>

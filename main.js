@@ -1,11 +1,13 @@
-var annualIncome = 0;
-var weeks_in_Year_Value = 0;
+var annualIncome = 0; // Variable to store the annual income, initialized to 0
+var weeks_in_Year_Value = 0; // Variable to store the number of weeks in a year, initialized to 0
 
+// Event listener for input changes on certain elements to trigger calculations
 document.getElementById("resultLabel").addEventListener("input", function () {
   getAnnualPay();
   getNetAnnualPay();
 });
 
+// Event listeners for input changes on various elements to trigger calculations
 document.getElementById("hourlyWage").addEventListener("input", function () {
   getAnnualPay();
   getNetAnnualPay();
@@ -25,6 +27,7 @@ document.getElementById("taxPercentage").addEventListener("input", function () {
   getNetAnnualPay();
 });
 
+// Function to calculate annual pay based on input values
 function getAnnualPay() {
   var hourlyWageValue = document.getElementById("hourlyWage").value;
   weeks_in_Year_Value = document.getElementById("weeks_in_Year").value;
@@ -38,6 +41,7 @@ function getAnnualPay() {
   resultLabel.textContent = "Annual Pay: $" + formattedIncome;
 }
 
+// Function to calculate net annual pay based on input values
 function getNetAnnualPay() {
   var taxPercentage = document.getElementById("taxPercentage").value;
   var net_Yearly_Income_Label = document.getElementById("net_Yearly_Income");
@@ -59,10 +63,13 @@ function getNetAnnualPay() {
   net_Hourly_Income_Label.textContent =
     "Net Hourly Pay: $" + formatted_Net_Hourly_Income;
 }
+
+// Event listener for input changes on the yearlyWage element to trigger hourly pay calculation
 document.getElementById("yearlyWage").addEventListener("input", function () {
   getHourlyPay();
 });
 
+// Event listeners for input changes on certain elements to trigger hourly pay calculation
 document
   .getElementById("weeks_in_Year_HPC")
   .addEventListener("input", function () {
@@ -75,6 +82,7 @@ document
     getHourlyPay();
   });
 
+// Function to calculate hourly pay based on input values
 function getHourlyPay() {
   var yearlyWage = document.getElementById("yearlyWage").value;
   var numberStripped = yearlyWage.replace(/,/g, "");
@@ -92,6 +100,8 @@ function getHourlyPay() {
 
   resultLabel_HPC.textContent = "Hourly Wage: $" + formatted_hourlyWageHPC;
 }
+
+// Function to append a value to a custom input element (not found in provided HTML)
 function appendToInput(value) {
   document.getElementById("customInput").value += value;
 }
